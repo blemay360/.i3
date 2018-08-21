@@ -56,7 +56,7 @@ bindsym Mod4+XF86MonBrightnessUp exec "redshift -x"
 bindsym XF86Reload exec xdotool key ctrl+r
 
 #Initiates automated scripts to start vpnbook
-bindsym Mod4+shift+v exec "xfce4-terminal -x ./bin/vpnbook/getPass.sh"
+bindsym Mod4+shift+v exec "xfce4-terminal -x ./bin-master/vpnbook/getPass.sh"
 
 #open thunar
 bindsym Mod4+ctrl+z exec thunar
@@ -76,7 +76,7 @@ bindsym Mod4+shift+s exec spotify
 #bindsym Mod4+c exec google-chrome-stable
 
 #open EagleCAD
-bindsym Mod4+c exec ~/Downloads/eagle-8.5.2/eagle
+bindsym Mod4+c exec ~/eagle-9.1.0/eagle
 
 #open Netflix
 bindsym Mod4+shift+n exec "firefox -new-window https://www.netflix.com"
@@ -88,7 +88,7 @@ bindsym Mod4+shift+u exec "firefox -new-window https://www.hulu.com"
 #bindsym Mod4+shift+a exec "firefox -new-window https://www.amazon.com/stream/ref=nav_upnav_LargeImage_C_Browse"
 
 #open Arduino IDE
-bindsym Mod4+shift+a exec "xfce4-terminal -e='./bin/keyboard/keyboard.sh a'"
+bindsym Mod4+shift+a exec "xfce4-terminal -e='./bin-master/keyboard/keyboard.sh a'"
 
 #play/pause song for spotify
 bindsym ctrl+Up exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
