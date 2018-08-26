@@ -72,6 +72,9 @@ bindsym Mod4+shift+g exec firefox -new-tab www.gmail.com
 #open spotify
 bindsym Mod4+shift+s exec spotify
 
+#open slack
+bindsym Mod4+ctrl+s exec slack
+
 #open chrome
 #bindsym Mod4+c exec google-chrome-stable
 

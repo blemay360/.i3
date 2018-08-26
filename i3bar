@@ -125,7 +125,7 @@ function network {
 function vpn {
 #queries TUN0 to see if a vpn is enabled. If it is, it will give a whole message, otherwise it will give a short error
 	TUN0=$(command ifconfig -a)
-	if [ ${#TUN0} -gt 1200 ]; then
+	if [ ${#TUN0} -gt 1150 ]; then
 		if [ "$firstRunVPN" -eq 0 ]; then
 			let firstRunVPN=1
 		fi
@@ -138,10 +138,10 @@ function vpn {
 #prints the time until next class
 function nextClass {
 	if [ "$last_run" = "" ]; then
-		nextClass=$(bash /home/blemay360/bin/classSchedule/classSchedule.sh)
+		nextClass=$(bash /home/blemay360/bin-master/classSchedule/classSchedule.sh)
 		lastrun="$(command date "+%M")"
 	elif [ "$last_run" != $(command date "+%M") ]; then
-		nextClass=$(bash /home/blemay360/bin/classSchedule/classSchedule.sh)
+		nextClass=$(bash /home/blemay360/bin-master/classSchedule/classSchedule.sh)
 		lastrun="$(command date "+%M")"
 	fi
 	if [ "$nextClass" != "" ]; then
@@ -172,7 +172,7 @@ function main {
 	batstat
 	network
 	vpn
-#	nextClass
+	nextClass
 	printdate
 	echo '{"full_text":""}],' #ends packet
 	main #iterates to send the next packet
