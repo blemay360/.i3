@@ -90,6 +90,9 @@ bindsym Mod4+shift+u exec "firefox -new-window https://www.hulu.com"
 #open Amazon video
 #bindsym Mod4+shift+a exec "firefox -new-window https://www.amazon.com/stream/ref=nav_upnav_LargeImage_C_Browse"
 
+#Screenshot
+bindsym Mod4+XF86Display exec xfce4-screenshooter
+
 #open Arduino IDE
 bindsym Mod4+shift+a exec "xfce4-terminal -e='./bin-master/keyboard/keyboard.sh a'"
 
@@ -105,11 +108,16 @@ bindsym ctrl+Right exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.sp
 #Disable touchpad
 bindsym XF86Tools exec "bash /home/blemay360/bin-master/toggleKeyboardMouse/main"
 
+#Bantam tools
+bindsym Mod4+o exec "wine ~/.wine/drive_c/'Program Files (x86)'/'Bantam Tools'/BantamTools.exe"
+
 #Raise volume
-bindsym F9 exec "amixer -q -D pulse sset Master 5%-"
+#bindsym F9 exec "amixer -q -D pulse sset Master 5%-"
+#bindsym F9 exec "xdotool key Up"
 
 #Lower volume
-bindsym F10 exec "amixer -q -D pulse sset Master 5%+"
+#bindsym F10 exec "amixer -q -D pulse sset Master 5%+"
+#bindsym F10 exec "xdotool key Down"
 
 ###########################################################################
 ###END OF CUSTOM KEYBINDINGS###
